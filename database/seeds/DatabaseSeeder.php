@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MarcaTableSeeder::class);
         $this->call(MonedaTableSeeder::class);
         $this->call(ProductoTableSeeder::class);
+        $this->call(UserTableSeeder::class);
         Model::reguard();
     }
 }

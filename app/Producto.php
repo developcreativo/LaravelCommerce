@@ -80,5 +80,20 @@ class Producto extends Model
             'ruta_miniatura'    => '/' . $path . 'min/' . $name
         ]);
     }
+
+    public function getEditButtonAttribute()
+    {
+        return '<a href="productos/'. $this->id .'/edit" title="Editar"><i class="fa fa-pencil"></i></a>';
+    }
+
+    public function getPicturesButtonAttribute()
+    {
+        return '<a href="pro/'. $this->id .'/agregar-foto" title="Fotos"><i class="fa fa-picture-o"></i></a>';
+    }
+
+    public function getBotonesAttribute()
+    {
+        return $this->editButton . '&nbsp; &nbsp;' . $this->picturesButton;
+    }
 }
 

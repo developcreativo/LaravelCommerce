@@ -18,6 +18,12 @@ use Log;
 
 class ProductoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -126,7 +132,7 @@ class ProductoController extends Controller
                     'tipo'          => $p->tipo->nombre_es,
                     'marca'         => $p->marca ? $p->marca->nombre : '' ,
                     'precio'        => $p->precioFormateado,
-                    'acciones'      => ''
+                    'acciones'      => $p->botones
                 ];
         });
 

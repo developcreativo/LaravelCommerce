@@ -8,7 +8,6 @@
     <title>Administración</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
@@ -36,6 +35,8 @@
     {!! Html::script('ckeditor/ckeditor.js') !!}
     {!! Html::script('js/funciones.js') !!}
     {!! HTML::style('admin/css/dropzone.min.css') !!}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">
@@ -60,10 +61,10 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inmobiliarias<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url('/admin/inmobiliaria') }}">Reales</a></li>
-                            <li><a href="{{ url('/admin/fachada_inmobiliaria') }}">Fachadas</a></li>
+                            <li><a href="{{ url('/productos') }}"><span class="glyphicon glyphicon-th-list"></span> Lista</a></li>
+                            <li><a href="{{ url('/productos/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
                         </ul>
                     </li>
 
