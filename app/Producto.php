@@ -28,6 +28,7 @@ class Producto extends Model
     		'precio',
             'stock_minimo',
             'stock',
+            'activo',
     		'url', //this field is self-generate by the title in spanish
     ];
 

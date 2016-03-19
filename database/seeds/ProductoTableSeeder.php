@@ -28,6 +28,7 @@ class ProductoTableSeeder extends Seeder
         	'precio' => '70',
         	'stock'	=> '200',
         	'stock_minimo' => '20',
+            'activo' => 1,
         	'url' => str_slug('Camiseta manga corta-1')
         	]);
         Foto::create([
@@ -50,6 +51,7 @@ class ProductoTableSeeder extends Seeder
         	'moneda_id' => '1',
         	'precio' => '70',
         	'stock_minimo' => '5',
+            'activo' => 1,
         	'stock' => '50',
         	'url' => str_slug('Camisa de dama verde-2')
         	]);
@@ -74,6 +76,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '70',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-3')
         	]);
         Foto::create([
@@ -97,6 +100,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '70',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-4')
         	]);
         Foto::create([
@@ -120,6 +124,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '70',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-5')
         	]);
         Foto::create([
@@ -143,6 +148,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '70',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-6')
         	]);
         Foto::create([
@@ -166,6 +172,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '70',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-7')
         	]);
         Foto::create([
@@ -189,6 +196,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '1500',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-9')
             ]);
         Foto::create([
@@ -224,6 +232,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '1500',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-9')
             ]);
         Foto::create([
@@ -259,6 +268,7 @@ class ProductoTableSeeder extends Seeder
             'precio' => '1500',
             'stock_minimo' => '5',
             'stock' => '50',
+            'activo' => 1,
             'url' => str_slug('Camisa de dama verde-10')
             ]);
         Foto::create([

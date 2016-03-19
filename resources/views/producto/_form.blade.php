@@ -147,6 +147,16 @@
 	            </span>
             @endif
 		</div>
+		<br>
+		<div class="for-group{{ $errors->has('activo') ? ' has-error' : '' }}">
+			<label for="">Estado de item</label>
+			{!! Form::select('activo', ['1' => 'Activo', '0' => 'Inactivo'], null, ['id' => 'activo', 'class' => 'form-control']) !!}
+			@if ($errors->has('activo'))
+	            <span class="help-block">
+	                <strong>{{ $errors->first('activo') }}</strong>
+	            </span>
+            @endif
+		</div>
 	</div>
 </div>
 <div class="clear-fix"></div>

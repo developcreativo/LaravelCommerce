@@ -37,6 +37,7 @@ class CreateProductosTable extends Migration
             $table->double('precio', 15, 2)->nullable();
             $table->integer('stock')->nullable();
             $table->integer('stock_minimo')->nullable();
+            $table->boolean('activo')->default(1);
 
             $table->string('url');
             $table->timestamps();
