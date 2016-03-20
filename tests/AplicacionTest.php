@@ -77,4 +77,31 @@ class AplicacionTest extends TestCase
             'stock_minimo' => '5'
             ]);
     }
+
+    public function test_nueva_categoria()
+    {
+        $this->visit('/')
+        ->click('Entrar')
+        ->seePageIs('auth/login')
+        ->see('Login')
+        ->type('yasser.mussa@gmail.com', 'email')
+        ->type('entrar', 'password')
+        ->press('Entrar')
+        ->seePageIs('/')
+        ->see('Yasser')
+        ->click('Yasser')
+        ->seePageIs('/productos')
+        ->visit('/categorias')
+        ->click('Nueva Categoría')
+        ->type('Nueva Categoria', 'nombre_es')
+        ->type('new category', 'nombre_en')
+        ->type('Nova Categoria', 'nombre_br')
+        ->press('Guardar')
+        ->seePageIs('/categorias')
+        ->seeInDatabase('categorias', [
+            'nombre_es' => 'Nueva Categoria',
+            'nombre_en' => 'new category',
+            'nombre_br' => 'Nova Categoria'
+            ]);        
+    }
 }

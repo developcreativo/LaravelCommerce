@@ -14,6 +14,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <style>
         body {
             font-family: 'Lato';
@@ -35,6 +36,7 @@
     {!! Html::script('ckeditor/ckeditor.js') !!}
     {!! Html::script('js/funciones.js') !!}
     {!! HTML::style('admin/css/dropzone.min.css') !!}
+    {!! HTML::style('admin/css/sweetalert.css') !!}
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -67,7 +69,13 @@
                             <li><a href="{{ url('/productos/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
                         </ul>
                     </li>
-
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categoría<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/categorias') }}"><span class="glyphicon glyphicon-th-list"></span> Lista</a></li>
+                            <li><a href="{{ url('/categorias/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -96,6 +104,7 @@
     <!--Dropzone -->
     
     {!! HTML::script('admin/js/dropzone.min.js') !!}
+    {!! HTML::script('admin/js/sweetalert.min.js') !!}
     @yield('scripts')
 </body>
 </html>

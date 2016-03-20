@@ -40,7 +40,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 //Resources
 Route::resource('productos', 'ProductoController');
-Route::resource('categoria', 'CategoriaController');
+Route::resource('categorias', 'CategoriaController');
 Route::resource('tipo', 'TipoController');
 Route::resource('marca', 'MarcaController');
 
@@ -49,7 +49,10 @@ Route::get('pro/{id}/agregar-foto', 'ProductoController@showAddFoto');
 Route::post('pro/{id}/fotos', ['as' => 'store_foto_producto', 'uses' => 'ProductoController@guardarFoto']);
 
 Route::group(['prefix' => 'api'], function(){
+	//tablas
 	Route::get('getAllProductos', 'ProductoController@getAll');
+	Route::get('getAllCategorias', 'CategoriaController@getAll');
+	//combos
 	Route::get('obtenerCategorias', 'CategoriaController@getSelect');
 	Route::get('obtenerTipos', 'TipoController@getSelect');
 	Route::get('obtenerMarcas', 'MarcaController@getSelect');

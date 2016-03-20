@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Requests\CategoriaRequest;
 use App\Http\Controllers\Controller;
 use App\Categoria;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
 use Log;
 
 class CategoriaController extends Controller
@@ -24,7 +26,7 @@ class CategoriaController extends Controller
 
     public function index()
     {
-        //
+        return View('categoria.index');
     }
 
     /**
@@ -34,7 +36,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return View('categoria.create');
     }
 
     /**
@@ -49,6 +51,9 @@ class CategoriaController extends Controller
         {
             Categoria::create($request->all());
             return response()->json(['ok' => 'se ha creado']);
+        }else{
+            Categoria::create($request->all());
+            return redirect()->to('/categorias');
         }
     }
 
@@ -60,7 +65,7 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'En proceso.';
     }
 
     /**
@@ -71,7 +76,9 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = Categoria::findOrfail($id);
+
+        return View('categoria.edit', compact('categoria'));
     }
 
     /**
@@ -81,9 +88,13 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoriaRequest $request, $id)
     {
-        //
+        $categoria = Categoria::findOrfail($id);
+        $categoria->update($request->all());
+
+        flash()->success('Se modifico correctmente la categoria', 'Exelente');
+        return redirect()->to('/categorias');
     }
 
     /**
@@ -102,6 +113,27 @@ class CategoriaController extends Controller
         $categorias = Categoria::orderBy('nombre_es')->get();
 
         return response()->json($categorias->lists('nombre_es', 'id'));
+    }
+
+    public function getAll()
+    {
+        $categorias = Categoria::all();
+
+        $fractal = new Manager();
+        $resource = new Collection($categorias, function(Categoria $c) {
+               return [
+                    'id'            => $c->id,
+                    'nombre_es'     => $c->nombre_es,
+                    'nombre_en'     => $c->nombre_en,
+                    'nombre_br'     => $c->nombre_br,
+                    'imagen'        => $c->imagenText,
+                    'acciones'      => $c->acciones
+                ];
+        });
+
+        $categorias = $fractal->createData($resource)->toArray();
+
+        return $categorias;
     }
 
     public function productosPorCategoria($categoria)
