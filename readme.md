@@ -4,9 +4,39 @@ Comercio en Laravel PHP Framework es un proyecto opensource para crear páginas 
 
 ## Official Documentation
 
-#Requitos
+#Requisitos
 
 Para poder instalar el software necesita los siguientes requerimientos
+
+	- Apache server
+	- Mysql
+	- Composer
+
+	Instalación:
+
+	Paso 1
+	
+	Instalar Apache Server
+
+	Paso 2
+
+	Descargar e installar [Composer](https://getcomposer.org/)
+
+	Paso 3 
+
+	Instalar Mysql server y crear un Schema con el nombre "comercio",
+
+	Paso 4 
+
+	En la carpeta del proyecto ejecutar los siguientes comandos 
+
+	$ composer install 
+
+	$ php artisan migrate --seed
+
+	$ php artisan serve
+
+	Luego entrar en la dirección de la consola.
 
 ## Contributing
 
