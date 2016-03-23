@@ -32,6 +32,7 @@
     {!! Html::style('admin/bootstrap-table/bootstrap-table.css') !!}
     {!! Html::script('admin/bootstrap-table/bootstrap-table.js') !!}
     {!! Html::script('admin/bootstrap-table/locale/bootstrap-table-es-SP.js') !!}
+    {!! Html::script('admin/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.js') !!}
     {!! Html::style('admin/admin-style.css') !!}
     {!! Html::script('ckeditor/ckeditor.js') !!}
     {!! Html::script('js/funciones.js') !!}
@@ -69,11 +70,25 @@
                             <li><a href="{{ url('/productos/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
                         </ul>
                     </li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categoría<span class="caret"></span></a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categor&iacute;a<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url('/categorias') }}"><span class="glyphicon glyphicon-th-list"></span> Lista</a></li>
                             <li><a href="{{ url('/categorias/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tipos<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/tipo') }}"><span class="glyphicon glyphicon-th-list"></span> Lista</a></li>
+                            <li><a href="{{ url('/tipo/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Marcas<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/marca') }}"><span class="glyphicon glyphicon-th-list"></span> Lista</a></li>
+                            <li><a href="{{ url('/marca/create') }}"><span class="glyphicon glyphicon-plus"></span> Nuevo</a></li>
                         </ul>
                     </li>
                 </ul>

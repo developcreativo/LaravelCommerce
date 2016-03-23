@@ -52,6 +52,8 @@ Route::group(['prefix' => 'api'], function(){
 	//tablas
 	Route::get('getAllProductos', 'ProductoController@getAll');
 	Route::get('getAllCategorias', 'CategoriaController@getAll');
+	Route::get('getAllTipos', 'TipoController@getAll');
+	Route::get('getAllMarcas', 'MarcaController@getAll');
 	//combos
 	Route::get('obtenerCategorias', 'CategoriaController@getSelect');
 	Route::get('obtenerTipos', 'TipoController@getSelect');

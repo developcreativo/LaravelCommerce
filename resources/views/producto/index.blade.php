@@ -26,32 +26,45 @@
 		    columns: [{
 		        field: 'id',
 		        title: 'Id',
-		        align: 'center'
+		        align: 'center',
+		        filterControl: 'input'
 		    }, {
 		        field: 'titulo',
 		        title: 'Titulo',
-		        align: 'center'
+		        align: 'center',
+		        filterControl: 'input'
 		    }, {
 		        field: 'categoria',
 		        title: 'Categoría',
-		        align: 'center'
+		        align: 'center',
+		        filterControl: 'select'
 		    }, {
 		        field: 'tipo',
 		        title: 'Tipo',
-		        align: 'center'
+		        align: 'center',
+		        filterControl: 'select'
 		    }, {
 		        field: 'marca',
 		        title: 'Marca',
-		        align: 'center'
+		        align: 'center',
+		        filterControl: 'select'
 		    }, {
 		        field: 'precio',
 		        title: 'Precio',
-		        align: 'center'
+		        align: 'center',
+		        filterControl: 'input'
 		    }, {
 		        field: 'acciones',
 		        title: 'Acciones',
 		        align: 'center'
-		    },]
+		    },],
+		    filterShowClear: true,
+            align: 'center',
+            valign: 'center',
+            searchFormatter: true,
+            filterControl: true,
+            pagination: true,
+            pageSize: 20
 		});
 	</script>
 @endsection

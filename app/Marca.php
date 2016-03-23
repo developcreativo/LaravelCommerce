@@ -23,4 +23,20 @@ class Marca extends Model
     {
     	$this->hasMany('App\Producto');
     }
+
+    public function getTieneLogoAttribute()
+    {
+        if(!$this->logo || $this->logo == '')
+            return 'No tiene';
+        return 'Si';
+    }
+
+    public function getEditarButtonAttribute()
+    {
+        return '<a href="marca/'. $this->id .'/edit" title="Editar"><i class="fa fa-pencil"></i></a>';
+    }
+
+    public function getAccionesAttribute(){
+        return $this->editarButton;
+    }
 }

@@ -8,6 +8,9 @@ use App\Http\Requests;
 use App\Http\Requests\TipoRequest;
 use App\Http\Controllers\Controller;
 use App\Tipo;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
+use Log;
 
 class TipoController extends Controller
 {
@@ -18,7 +21,7 @@ class TipoController extends Controller
      */
     public function index()
     {
-        //
+        return View('tipo.index');
     }
 
     /**
@@ -28,7 +31,7 @@ class TipoController extends Controller
      */
     public function create()
     {
-        //
+        return View('tipo.create');
     }
 
     /**
@@ -42,9 +45,14 @@ class TipoController extends Controller
         if($request->ajax())
         {
             $tipo = Tipo::create($request->all());
-            $tipo->url = str_slug($tipo->nombre_es);
+            $tipo->url = str_slug($tipo->nombre_es) . $tipo->id;
             $tipo->save();
             return response()->json(['ok' => 'se ha creado']);
+        }else{
+            $tipo = Tipo::create($request->all());
+            $tipo->url = str_slug($tipo->nombre_es) . $tipo->id;
+            $tipo->save();
+            return redirect()->to('/tipo');
         }
     }
 
@@ -67,7 +75,8 @@ class TipoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tipo = Tipo::findOrFail($id);
+        return View('tipo.edit', compact('tipo'));
     }
 
     /**
@@ -79,7 +88,12 @@ class TipoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tipo = Tipo::findOrFail($id);
+        $tipo->update($request->all());
+        $tipo->url = str_slug($tipo->nombre_es) . $tipo->id;
+        $tipo->save();
+
+        return redirect()->to('/tipo');
     }
 
     /**
@@ -98,5 +112,25 @@ class TipoController extends Controller
         $tipos = Tipo::orderBy('nombre_es')->get();
 
         return response()->json($tipos->lists('nombre_es', 'id'));
+    }
+
+    public function getAll()
+    {
+    	$tipos = Tipo::all();
+
+        $fractal = new Manager();
+        $resource = new Collection($tipos, function(Tipo $t) {
+               return [
+                    'id'            => $t->id,
+                    'nombre_es'     => $t->nombre_es,
+                    'nombre_en'     => $t->nombre_en,
+                    'nombre_br'     => $t->nombre_br,
+                    'acciones'      => $t->acciones
+                ];
+        });
+
+        $tipos = $fractal->createData($resource)->toArray();
+
+        return $tipos;
     }
 }

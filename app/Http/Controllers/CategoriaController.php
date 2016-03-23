@@ -49,10 +49,14 @@ class CategoriaController extends Controller
     {
         if($request->ajax())
         {
-            Categoria::create($request->all());
+            $categoria = Categoria::create($request->all());
+            $categoria->url = str_slug($categoria->nombre_es) . $categoria->id;
+            $categoria->save();
             return response()->json(['ok' => 'se ha creado']);
         }else{
-            Categoria::create($request->all());
+            $categoria = Categoria::create($request->all());
+            $categoria->url = str_slug($categoria->nombre_es) . $categoria->id;
+            $categoria->save();
             return redirect()->to('/categorias');
         }
     }
@@ -92,6 +96,8 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::findOrfail($id);
         $categoria->update($request->all());
+        $categoria->url = str_slug($categoria->nombre_es) . $categoria->id;
+        $categoria->save();
 
         flash()->success('Se modifico correctmente la categoria', 'Exelente');
         return redirect()->to('/categorias');
@@ -139,8 +145,9 @@ class CategoriaController extends Controller
     public function productosPorCategoria($categoria)
     {
         $categoria = Categoria::where('url', $categoria)->first();
+        if(!$categoria)
+            return redirect()->to('/404'); //
         $productos = Producto::paginate(9);
-        return View('frontend.pr
-            oduct', compact('productos'));
+        return View('frontend.product', compact('productos'));
     }
 }

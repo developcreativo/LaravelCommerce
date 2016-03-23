@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Requests\MarcaRequest;
 use App\Http\Controllers\Controller;
 use App\Marca;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
 
 class MarcaController extends Controller
 {
@@ -18,7 +20,7 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        //
+        return View('marca.index');
     }
 
     /**
@@ -28,7 +30,7 @@ class MarcaController extends Controller
      */
     public function create()
     {
-        //
+        return View('marca.create');
     }
 
     /**
@@ -42,9 +44,14 @@ class MarcaController extends Controller
         if($request->ajax())
         {
             $marca = Marca::create($request->all());
-            $marca->url = str_slug($marca->nombre);
+            $marca->url = str_slug($marca->nombre) . $marca->id;
             $marca->save();
             return response()->json(['ok' => 'se ha creado']);
+        }else{
+            $marca = Marca::create($request->all());
+            $marca->url = str_slug($marca->nombre) . $marca->id;
+            $marca->save();
+            return redirect()->to('/marca');
         }
     }
 
@@ -67,7 +74,8 @@ class MarcaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $marca = Marca::findOrfail($id);
+        return View('marca.edit', compact('marca'));
     }
 
     /**
@@ -77,9 +85,14 @@ class MarcaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MarcaRequest $request, $id)
     {
-        //
+        $marca = Marca::findOrfail($id);
+        $marca->update($request->all());
+        $marca->url = str_slug($marca->nombre) . $marca->id;
+        $marca->save();
+
+        return redirect()->to('/marca');
     }
 
     /**
@@ -98,5 +111,25 @@ class MarcaController extends Controller
         $marcas = Marca::orderBy('nombre')->get();
 
         return response()->json($marcas->lists('nombre', 'id'));
+    }
+
+    public function getAll()
+    {
+        $marcas = Marca::all();
+
+        $fractal = new Manager();
+        $resource = new Collection($marcas, function(Marca $m) {
+               return [
+                    'id'            => $m->id,
+                    'nombre'        => $m->nombre,
+                    'logo'          => $m->tieneLogo,
+                    'url'     => $m->url,
+                    'acciones'      => $m->acciones
+                ];
+        });
+
+        $marcas = $fractal->createData($resource)->toArray();
+
+        return $marcas;
     }
 }

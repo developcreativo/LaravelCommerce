@@ -24,4 +24,14 @@ class Tipo extends Model
     {
     	$this->hasMany('App\Producto');
     }
+
+    public function getEditarButtonAttribute()
+    {
+        return '<a href="/tipo/'. $this->id. '/edit"><i class="fa fa-pencil"></i></a>';
+    }
+
+    public function getAccionesAttribute()
+    {
+        return $this->editarButton;
+    }
 }
