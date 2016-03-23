@@ -27,16 +27,13 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
     public function setUp()
     {
-        //Config::set('database.default', 'sqlite_testing');
-        //Artisan::call('migrate');
-        //Artisan::call('db:seed');
-        parent::setUp();
-        
+        Artisan::call('migrate');
+        Artisan::call('db:seed');
+        parent::setUp();       
     }
 
     public function tearDown()
     {
-        //Artisan::call('migrate:reset');
         parent::tearDown();
     }
 }
