@@ -3,9 +3,9 @@
 <!-- Baner Top -->
 <div class="banner-top">
 	<div class="container">
-		<h1>Products</h1>
+		<h1>Productos</h1>
 		<em></em>
-		<h2><a href="index.html">Home</a><label>/</label>Products</h2>
+		<h2><a href="index.html">Inicio</a><label>/</label>Productos</h2>
 	</div>
 </div>
 
@@ -55,42 +55,42 @@
 		<div class="col-md-3 product-bottom">
 			<!--categories-->
 				<div class=" rsidebar span_1_of_left">
-						<h4 class="cate">Categories</h4>
+						<h4 class="cate">Categor&iacute;s</h4>
 							 <ul class="menu-drop">
-							<li class="item1"><a href="#">Men </a>
+							<li class="item1"><a href="#">Hombre </a>
 								<ul class="cute">
-									<li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="product.html">Automatic Fails </a></li>
+									<li class="subitem1"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem2"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem3"><a href="product.html">Sub categor&iacute;a</a></li>
 								</ul>
 							</li>
-							<li class="item2"><a href="#">Women </a>
+							<li class="item2"><a href="#">Mujer</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="product.html">Automatic Fails </a></li>
+									<li class="subitem1"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem2"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem3"><a href="product.html">Sub categor&iacute;a</a></li>
 								</ul>
 							</li>
-							<li class="item3"><a href="#">Kids</a>
+							<li class="item3"><a href="#">Ni&ntilde;os</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="product.html">Automatic Fails</a></li>
+									<li class="subitem1"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem2"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem3"><a href="product.html">Sub categor&iacute;a</a></li>
 								</ul>
 							</li>
-							<li class="item4"><a href="#">Accessories</a>
+							<li class="item4"><a href="#">Accesorios</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="product.html">Automatic Fails</a></li>
+									<li class="subitem1"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem2"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem3"><a href="product.html">Sub categor&iacute;a</a></li>
 								</ul>
 							</li>
 									
-							<li class="item4"><a href="#">Shoes</a>
+							<li class="item4"><a href="#">Zapatos</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="product.html">Automatic Fails </a></li>
+									<li class="subitem1"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem2"><a href="product.html">Sub categor&iacute;a</a></li>
+									<li class="subitem3"><a href="product.html">Sub categor&iacute;a</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -118,41 +118,41 @@
 
 <!--//menu-->
  <section  class="sky-form">
-					<h4 class="cate">Discounts</h4>
-					 <div class="row row1 scroll-pane">
-						 <div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
-						 </div>
-						 <div class="col col-4">
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
-						 </div>
-					 </div>
-				 </section> 				 				 
+	<h4 class="cate">Descuentos</h4>
+	 <div class="row row1 scroll-pane">
+		 <div class="col col-4">
+				<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Arriba de - 10% (20)</label>
+		 </div>
+		 <div class="col col-4">
+				<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
+				<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
+				<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
+				<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Otros(50)</label>
+		 </div>
+	 </div>
+ </section> 				 				 
 				 
 					
 					 <!---->
 					 <section  class="sky-form">
-						<h4 class="cate">Type</h4>
+						<h4 class="cate">Tipos</h4>
 							<div class="row row1 scroll-pane">
 								<div class="col col-4">
 									<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Sofa Cum Beds (30)</label>
 								</div>
 								<div class="col col-4">
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Bags  (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Caps & Hats (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Jackets & Coats   (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Carteras  (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Capas y sombreros (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Camperas y abrigos  (30)</label>
 									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Jeans  (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Shirts   (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Sunglasses  (30)</label>
-									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Swimwear  (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Camisas  (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Lentes de sol  (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Salidas de ba&ntilde;o  (30)</label>
 								</div>
 							</div>
 				   </section>
 				   		<section  class="sky-form">
-						<h4 class="cate">Brand</h4>
+						<h4 class="cate">Marcas</h4>
 							<div class="row row1 scroll-pane">
 								<div class="col col-4">
 									<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Roadstar</label>
