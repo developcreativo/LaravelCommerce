@@ -1,13 +1,7 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Shopin A Ecommerce Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>LaravelCommerce | programArte</title>
 <!-- 
 {!! Html::style('css/default.css') !!}
 {!! Html::script('js/tabs.js') !!}
@@ -129,10 +123,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu1</h4>
                                     <ul>
-                                        <li><a href="{{ url('products') }}">Accessories</a></li>
-                                        <li><a href="{{ url('products') }}">Bags</a></li>
-                                        <li><a href="{{ url('products') }}">Caps & Hats</a></li>
-                                        <li><a href="{{ url('products') }}">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="{{ url('products') }}">Accesorios</a></li>
+                                        <li><a href="{{ url('products') }}">Pantalones</a></li>
+                                        <li><a href="{{ url('products') }}">Capas y sombreros</a></li>
+                                        <li><a href="{{ url('products') }}">Ropa deportiva</a></li>
                                         
                                     </ul>   
                             </div>                          
@@ -141,12 +135,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu2</h4>
                                 <ul>
-                                        <li><a href="{{ url('products') }}">Jackets & Coats</a></li>
+                                        <li><a href="{{ url('products') }}">Camperas</a></li>
                                         <li><a href="{{ url('products') }}">Jeans</a></li>
-                                        <li><a href="{{ url('products') }}">Jewellery</a></li>
-                                        <li><a href="{{ url('products') }}">Jumpers & Cardigans</a></li>
-                                        <li><a href="{{ url('products') }}">Leather Jackets</a></li>
-                                        <li><a href="{{ url('products') }}">Long Sleeve T-Shirts</a></li>
+                                        <li><a href="{{ url('products') }}">Joyeria</a></li>
+                                        <li><a href="{{ url('products') }}">Jumpers y Cardigans</a></li>
+                                        <li><a href="{{ url('products') }}">Camperas de cuero</a></li>
+                                        <li><a href="{{ url('products') }}">Camisetas manga larga</a></li>
                                     </ul>   
                             </div>                          
                         </div>
@@ -154,13 +148,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu3</h4>
                                     <ul>
-                                        <li><a href="{{ url('products') }}">Shirts</a></li>
-                                        <li><a href="{{ url('products') }}">Shoes, Boots & Trainers</a></li>
-                                        <li><a href="{{ url('products') }}">Sunglasses</a></li>
-                                        <li><a href="{{ url('products') }}">Sweatpants</a></li>
-                                        <li><a href="{{ url('products') }}">Swimwear</a></li>
-                                        <li><a href="{{ url('products') }}">Trousers & Chinos</a></li>
-                                        
+                                        <li><a href="{{ url('products') }}">Camisas</a></li>
+                                        <li><a href="{{ url('products') }}">Zapatos, botas y championes</a></li>
+                                        <li><a href="{{ url('products') }}">Lentes de sol</a></li>
+                                        <li><a href="{{ url('products') }}">Ropa interior</a></li>
+                                        <li><a href="{{ url('products') }}">Trajes de ba&ntilde;o</a></li>                                        
                                     </ul>   
                                 
                             </div>                          
@@ -169,12 +161,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu4</h4>
                                 <ul>
-                                    <li><a href="{{ url('products') }}">T-Shirts</a></li>
-                                    <li><a href="{{ url('products') }}">Underwear & Socks</a></li>
-                                    <li><a href="{{ url('products') }}">Vests</a></li>
-                                    <li><a href="{{ url('products') }}">Jackets & Coats</a></li>
+                                    <li><a href="{{ url('products') }}">Camisetas</a></li>
+                                    <li><a href="{{ url('products') }}">Ropa interior y calcetines</a></li>
+                                    <li><a href="{{ url('products') }}">Chalecos</a></li>
+                                    <li><a href="{{ url('products') }}">Camperas y abrigos</a></li>
                                     <li><a href="{{ url('products') }}">Jeans</a></li>
-                                    <li><a href="{{ url('products') }}">Jewellery</a></li>
+                                    <li><a href="{{ url('products') }}">Joyer&iacute;a</a></li>
                                 </ul>   
                             </div>                          
                         </div>
@@ -193,10 +185,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu1</h4>
                                     <ul>
-                                        <li><a href="{{ url('products') }}">Accessories</a></li>
-                                        <li><a href="{{ url('products') }}">Bags</a></li>
-                                        <li><a href="{{ url('products') }}">Caps & Hats</a></li>
-                                        <li><a href="{{ url('products') }}">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="{{ url('products') }}">Accesorios</a></li>
+                                        <li><a href="{{ url('products') }}">Pantalones</a></li>
+                                        <li><a href="{{ url('products') }}">Capas y sombreros</a></li>
+                                        <li><a href="{{ url('products') }}">Ropa deportiva</a></li>
                                         
                                     </ul>   
                             </div>                          
@@ -205,27 +197,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu2</h4>
                                 <ul>
-                                        <li><a href="{{ url('products') }}">Jackets & Coats</a></li>
+                                        <li><a href="{{ url('products') }}">Camperas</a></li>
                                         <li><a href="{{ url('products') }}">Jeans</a></li>
-                                        <li><a href="{{ url('products') }}">Jewellery</a></li>
-                                        <li><a href="{{ url('products') }}">Jumpers & Cardigans</a></li>
-                                        <li><a href="{{ url('products') }}">Leather Jackets</a></li>
-                                        <li><a href="{{ url('products') }}">Long Sleeve T-Shirts</a></li>
+                                        <li><a href="{{ url('products') }}">Joyeria</a></li>
+                                        <li><a href="{{ url('products') }}">Jumpers y Cardigans</a></li>
+                                        <li><a href="{{ url('products') }}">Camperas de cuero</a></li>
+                                        <li><a href="{{ url('products') }}">Camisetas manga larga</a></li>
                                     </ul>   
                             </div>                          
                         </div>
                         <div class="col1">
                             <div class="h_nav">
                                 <h4>Submenu3</h4>
-                                
-<ul>
-                                        <li><a href="{{ url('products') }}">Shirts</a></li>
-                                        <li><a href="{{ url('products') }}">Shoes, Boots & Trainers</a></li>
-                                        <li><a href="{{ url('products') }}">Sunglasses</a></li>
-                                        <li><a href="{{ url('products') }}">Sweatpants</a></li>
-                                        <li><a href="{{ url('products') }}">Swimwear</a></li>
-                                        <li><a href="{{ url('products') }}">Trousers & Chinos</a></li>
-                                        
+                                    <ul>
+                                        <li><a href="{{ url('products') }}">Camisas</a></li>
+                                        <li><a href="{{ url('products') }}">Zapatos, botas y championes</a></li>
+                                        <li><a href="{{ url('products') }}">Lentes de sol</a></li>
+                                        <li><a href="{{ url('products') }}">Ropa interior</a></li>
+                                        <li><a href="{{ url('products') }}">Trajes de ba&ntilde;o</a></li>                                        
                                     </ul>   
                                 
                             </div>                          
@@ -234,12 +223,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>Submenu4</h4>
                                 <ul>
-                                    <li><a href="{{ url('products') }}">T-Shirts</a></li>
-                                    <li><a href="{{ url('products') }}">Underwear & Socks</a></li>
-                                    <li><a href="{{ url('products') }}">Vests</a></li>
-                                    <li><a href="{{ url('products') }}">Jackets & Coats</a></li>
+                                    <li><a href="{{ url('products') }}">Camisetas</a></li>
+                                    <li><a href="{{ url('products') }}">Ropa interior y calcetines</a></li>
+                                    <li><a href="{{ url('products') }}">Chalecos</a></li>
+                                    <li><a href="{{ url('products') }}">Camperas y abrigos</a></li>
                                     <li><a href="{{ url('products') }}">Jeans</a></li>
-                                    <li><a href="{{ url('products') }}">Jewellery</a></li>
+                                    <li><a href="{{ url('products') }}">Joyer&iacute;a</a></li>
                                 </ul>   
                             </div>                          
                         </div>
@@ -266,12 +255,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i></a></li>
                     </ul>
                     <div class="cart box_1">
-                        <a href="checkout.html">
+                        <a href="{{url('checkout')}}">
                         <h3> <div class="total">
                             <span class="simpleCart_total"></span></div>
                             {!! HTML::image('images/cart.png', '') !!}</h3>
                         </a>
-                        <p><a href="javascript:;" class="simpleCart_empty">Carrito vacío</a></p>
+                        <p><a href="javascript:;" class="simpleCart_empty">Vaciar carro</a></p>
 
                     </div>
                     <div class="clearfix"> </div>
@@ -293,18 +282,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
          <script>
             $(document).ready(function() {
-            $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
-            fixedContentPos: false,
-            fixedBgPos: true,
-            overflowY: 'auto',
-            closeBtnInside: true,
-            preloader: false,
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-            });
-                                                                                        
+                $('.popup-with-zoom-anim').magnificPopup({
+                    type: 'inline',
+                    fixedContentPos: false,
+                    fixedBgPos: true,
+                    overflowY: 'auto',
+                    closeBtnInside: true,
+                    preloader: false,
+                    midClick: true,
+                    removalDelay: 300,
+                    mainClass: 'my-mfp-zoom-in'
+                });                                                                          
             });
         </script>       
             </div>
@@ -327,28 +315,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-3 footer-middle-in">
                     <h6>Información</h6>
                     <ul class=" in">
-                        <li><a href="404.html">About</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="contact.html">Site Map</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contactenos</a></li>
+                        <li><a href="#">Volver</a></li>
+                        <li><a href="contact.html">Mapa del Sitio</a></li>
                     </ul>
                     <ul class="in in1">
-                        <li><a href="#">Order History</a></li>
-                        <li><a href="wishlist.html">Wish List</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="#">Historial de compras</a></li>
+                        <li><a href="#">Lista de deseos</a></li>
+                        <li><a href="{{url('/auth/login')}}">Login</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-3 footer-middle-in">
                     <h6>Tags</h6>
                     <ul class="tag-in">
-                        <li><a href="#">Lorem</a></li>
-                        <li><a href="#">Sed</a></li>
-                        <li><a href="#">Ipsum</a></li>
-                        <li><a href="#">Contrary</a></li>
-                        <li><a href="#">Chunk</a></li>
-                        <li><a href="#">Amet</a></li>
-                        <li><a href="#">Omnis</a></li>
+                        <li><a href="#">Ropa</a></li>
+                        <li><a href="#">camisas</a></li>
+                        <li><a href="#">pantalon</a></li>
+                        <li><a href="#">falda</a></li>
+                        <li><a href="#">perfumes</a></li>
+                        <li><a href="#">producto</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 footer-middle-in">
@@ -369,7 +356,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="#">{!! HTML::image('images/f2.png', '', ['class' => 'img-responsive']) !!}</a></li>
                     <li><a href="#">{!! HTML::image('images/f3.png', '', ['class' => 'img-responsive']) !!}</a></li>
                 </ul>
-                <p class="footer-class">&copy; 2016 Shopin. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                <p class="footer-class">&copy; 2016 LaravelCommerce. Todos los Derechos Reservados | Dise&ntilde;o por <a href="#" target="_blank">Programarte</a> </p>
                 <div class="clearfix"> </div>
             </div>
         </div>

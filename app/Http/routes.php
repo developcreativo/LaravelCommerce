@@ -59,3 +59,7 @@ Route::group(['prefix' => 'api'], function(){
 	Route::get('obtenerTipos', 'TipoController@getSelect');
 	Route::get('obtenerMarcas', 'MarcaController@getSelect');
 });
+
+Route::group(['prefix' => 'front'], function(){
+	Route::get('products/{url}', 'FrontendController@getProduct');
+});
