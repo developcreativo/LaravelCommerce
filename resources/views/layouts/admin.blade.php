@@ -63,6 +63,13 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contenidos<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/productos') }}">Slider Principal</a></li>
+                            <li><a href="{{ url('/productos/create') }}">Ofertas</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos<span class="caret"></span></a>
                         <ul class="dropdown-menu">

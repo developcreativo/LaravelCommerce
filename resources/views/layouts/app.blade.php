@@ -113,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
         <ul class="nav navbar-nav nav_1">
-            <li><a class="color" href="index.html">Inicio</a></li>
+            <li><a class="color" href="{{ url('/') }}">Inicio</a></li>
             
             <li class="dropdown mega-dropdown active">
                 <a class="color1" href="#" class="dropdown-toggle" data-toggle="dropdown">Mujer<span class="caret"></span></a>              

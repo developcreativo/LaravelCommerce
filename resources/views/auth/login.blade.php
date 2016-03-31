@@ -23,6 +23,8 @@
 					<input type="password" id="password" name="password" placeholder="Contraseña" required="">
 					<i class="glyphicon glyphicon-lock"></i>
 				</div>
+				
+				@include('errors.listerrors')
 
 				<label class="hvr-skew-backward">
 					<input type="submit" value="Entrar">
