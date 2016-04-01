@@ -43,6 +43,7 @@ Route::resource('productos', 'ProductoController');
 Route::resource('categorias', 'CategoriaController');
 Route::resource('tipo', 'TipoController');
 Route::resource('marca', 'MarcaController');
+Route::resource('slider', 'SliderController');
 
 // Productos routes..
 Route::get('pro/{id}/agregar-foto', 'ProductoController@showAddFoto');
@@ -54,6 +55,7 @@ Route::group(['prefix' => 'api'], function(){
 	Route::get('getAllCategorias', 'CategoriaController@getAll');
 	Route::get('getAllTipos', 'TipoController@getAll');
 	Route::get('getAllMarcas', 'MarcaController@getAll');
+	Route::get('getAllSliders', 'SliderController@getAll');
 	//combos
 	Route::get('obtenerCategorias', 'CategoriaController@getSelect');
 	Route::get('obtenerTipos', 'TipoController@getSelect');
