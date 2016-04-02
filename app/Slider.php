@@ -12,7 +12,7 @@ class Slider extends Model
 
     protected $table = 'sliders';
 
-    protected $fotosdir = 'fotos/productos/';
+    protected $fotosdir = 'fotos/sliders/';
 
     protected $fillable = [
     		'image',
@@ -24,18 +24,13 @@ class Slider extends Model
     {
         $path = $this->fotosdir . $this->id . '/';
         $name = str_slug($this->nombre . '-' . microtime()) . '.' . $file->getClientOriginalExtension();
-        if(!file_exists($path . 'min'))
-            mkdir($path . 'min', 0777, true);
+        if(!file_exists($path))
+            mkdir($path, 0777, true);
         Image::make($file)
-            ->fit(233,323)
-            ->save($path . 'min/' . $name);
-        Image::make($file)
-            ->fit(426,590)
+            ->fit(1280,720)
             ->save($path . $name);
-        return $this->fotos()->create([
-            'ruta'              => '/' . $path . $name,
-            'ruta_miniatura'    => '/' . $path . 'min/' . $name
-        ]);
+        $this->image = '/' . $path . $name;
+        $this->save();
     }
 
     public function getEditarAttribute()
@@ -45,7 +40,7 @@ class Slider extends Model
 
     public function getDeleteAttribute()
     {
-    	return '<a onclick="delete('.$this->id.', 1)"><i class="fa fa-trash"></i></a>';
+    	return '<a href="#" onclick="delete('.$this->id.', 1)"><i class="fa fa-trash"></i></a>';
     }
 
    	public function getActionsAttribute()

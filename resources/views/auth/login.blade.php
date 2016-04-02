@@ -16,7 +16,7 @@
 			{!! Form::open(['method' => 'POST', 'files'=>true, 'action' => 'Auth\AuthController@postLogin']) !!}
 			<div class="col-md-6 login-do">
 				<div class="login-mail">
-					<input type="text" id="email" name="email" placeholder="Email" required="">
+					<input type="text" id="email" name="email" placeholder="Email" required="" value="{{old('email')}}">
 					<i  class="glyphicon glyphicon-envelope"></i>
 				</div>
 				<div class="login-mail">

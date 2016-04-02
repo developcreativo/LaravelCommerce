@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MonedaTableSeeder::class);
         $this->call(ProductoTableSeeder::class);
         $this->call(UserTableSeeder::class);
+        $this->call(SliderTableSeeder::class);
         Model::reguard();
     }
 }

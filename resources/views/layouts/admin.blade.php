@@ -38,6 +38,7 @@
     {!! Html::script('js/funciones.js') !!}
     {!! HTML::style('admin/css/dropzone.min.css') !!}
     {!! HTML::style('admin/css/sweetalert.css') !!}
+    {!! Html::style('css/flexslider.css') !!}
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -66,7 +67,7 @@
                 <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contenidos<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url('/productos') }}">Slider Principal</a></li>
+                            <li><a href="{{ url('/slider') }}">Slider Principal</a></li>
                             <li><a href="{{ url('/productos/create') }}">Ofertas</a></li>
                         </ul>
                     </li>
@@ -127,6 +128,7 @@
     
     {!! HTML::script('admin/js/dropzone.min.js') !!}
     {!! HTML::script('admin/js/sweetalert.min.js') !!}
+    {!! Html::script('js/jquery.flexslider.js') !!}
     @yield('scripts')
 </body>
 </html>

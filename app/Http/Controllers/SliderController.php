@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\SliderRequest;
 use App\Http\Controllers\Controller;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
+use App\Slider;
 
 class SliderController extends Controller
 {
@@ -18,7 +20,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        return View('slider.index');
+        $sliders = Slider::all();
+        return View('slider.index', compact('sliders'));
     }
 
     /**
@@ -26,6 +29,7 @@ class SliderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function create()
     {
         return View('slider.create');
@@ -37,9 +41,12 @@ class SliderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SliderRequest $request)
     {
-        //
+        $slider = Slider::create($request->all());
+        $slider->addFoto($request->file('imagen'));
+
+        return redirect()->to('/slider');
     }
 
     /**
@@ -97,7 +104,7 @@ class SliderController extends Controller
                     'id'            => $s->id,
                     'title'         => $s->title,
                     'text'          => $s->text,
-                    'actions'       => $s->acciones
+                    'actions'       => $s->actions
                 ];
         });
 

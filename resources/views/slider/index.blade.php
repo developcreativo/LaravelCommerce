@@ -14,6 +14,21 @@
 	  	<div class="row">
 	  		<a href="{!! action('SliderController@create') !!}" class="btn btn-primary">Nuevo Slider</a>
 	  	</div>
+	  	<div class="clear-fix"></div>
+	  	<hr>
+	  	<h3>Vista Previa</h3>
+	  	<hr>
+	  	<div class="flexslider">
+			<ul class="slides">
+				@foreach($sliders as $slider)
+				<li>
+					<img src="{{ $slider->image }}" />
+					<p class="flex-caption">Adventurer Cheesecake Brownie</p>
+				</li>
+				@endforeach
+			</ul>
+		</div>
+		<div class="clear-fix"></div>
 	  </div>
 	</div>
 </div>
@@ -24,15 +39,15 @@
 		$('#table').bootstrapTable({
 		    url: '/api/getAllSliders',
 		    columns: [{
-		        field: 'titulo',
+		        field: 'title',
 		        title: 'Titulo',
 		        align: 'center'
 		    }, {
-		        field: 'texto',
-		        title: 'texto',
+		        field: 'text',
+		        title: 'Texto',
 		        align: 'center'
 		    }, {
-		        field: 'acciones',
+		        field: 'actions',
 		        title: 'Acciones',
 		        align: 'center'
 		    },],
@@ -42,6 +57,13 @@
             searchFormatter: true,
             pagination: true,
             pageSize: 10
+		});
+	</script>
+	<script>
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide"
+			});
 		});
 	</script>
 @endsection
