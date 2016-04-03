@@ -23,10 +23,19 @@ class SliderRequest extends Request
      */
     public function rules()
     {
-        return [
-            'imagen'    => 'required|image|max:10240',
-            'title'     => 'required|max:20',
-            'text'      => 'max:50'
-        ];
+        if($this->method() == 'POST')
+        {
+            return [
+                'imagen'    => 'required|image|max:10240',
+                'title'     => 'required|max:20',
+                'text'      => 'max:50'
+            ];
+        }else{
+            return [
+                'imagen'    => 'image|max:10240',
+                'title'     => 'required|max:20',
+                'text'      => 'max:50'
+            ];
+        }
     }
 }

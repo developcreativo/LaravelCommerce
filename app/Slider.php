@@ -17,7 +17,8 @@ class Slider extends Model
     protected $fillable = [
     		'image',
     		'title',
-    		'text'
+    		'text',
+            'invertirfuente'
     ];
 
     public function addFoto($file)
@@ -33,7 +34,14 @@ class Slider extends Model
         $this->save();
     }
 
-    public function getEditarAttribute()
+    public function getFuenteInvertidaAttribute()
+    {
+        if($this->invertirfuente)
+            return 'Negra';
+        return 'Blanca';
+    }
+
+    public function getEditAttribute()
     {
     	return '<a href="/slider/'. $this->id .'/edit"><i class="fa fa-pencil"></i></a>';
     }
@@ -45,6 +53,6 @@ class Slider extends Model
 
    	public function getActionsAttribute()
    	{
-   		return $this->edit . '&nbsp;' . $this->delete; 
+   		return $this->edit . '&nbsp; &nbsp;' . $this->delete; 
    	}
 }

@@ -26,6 +26,18 @@
             </span>
         @endif
 	</div>
+	<div class="radio">
+		<label>
+			{!! Form::radio('invertirfuente', 1, true); !!}
+			<b>Fuente Negra</b> Seleccione si el la imagen es clara
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			{!! Form::radio('invertirfuente', 0, true); !!}
+			<b>Fuente Blanca</b> Seleccione si la imagen es oscura
+		</label>
+	</div>
 
 	<br>
 	<button type="submit" class="btn btn-primary">Guardar</button>

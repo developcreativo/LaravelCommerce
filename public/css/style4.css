@@ -277,10 +277,38 @@ ul.slides {
 .flex-caption p {
   bottom: 20px;
   position: absolute;
+  overflow: hidden;
+  width: 300px;
 }
 
 .flex-slider_title {
     position: relative;
-    top: 20%;
-    font-size: 3em;
+    font-size: 4em;
+    left: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.flex-slider_text {
+    position: relative;
+    font-size: 2em;
+    left: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.flex-slider_title-invert {
+    position: relative;
+    font-size: 4em;
+    left: 20px;
+    color: rgb(0,0,0);
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
+}
+
+.flex-slider_text-invert {
+    position: relative;
+    font-size: 2em;
+    left: 20px;
+    color: rgb(0,0,0);
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
 }

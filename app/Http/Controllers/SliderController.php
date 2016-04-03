@@ -10,9 +10,16 @@ use App\Http\Controllers\Controller;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
 use App\Slider;
+use Log;
 
 class SliderController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -45,7 +52,6 @@ class SliderController extends Controller
     {
         $slider = Slider::create($request->all());
         $slider->addFoto($request->file('imagen'));
-
         return redirect()->to('/slider');
     }
 
@@ -68,7 +74,8 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $slider = Slider::findOrfail($id);
+        return View('slider.edit', compact('slider'));
     }
 
     /**
@@ -78,9 +85,12 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SliderRequest $request, $id)
     {
-        //
+        $slider = findOrfail($id);
+        $slider->update($request->all());
+
+        return redirect()->to('/slider');
     }
 
     /**
@@ -104,6 +114,7 @@ class SliderController extends Controller
                     'id'            => $s->id,
                     'title'         => $s->title,
                     'text'          => $s->text,
+                    'fuente'        => $s->fuenteInvertida,
                     'actions'       => $s->actions
                 ];
         });

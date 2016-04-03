@@ -17,6 +17,7 @@ class CreateSlidersTable extends Migration
             $table->string('image');
             $table->string('title');
             $table->string('text');
+            $table->boolean('invertirfuente')->default(0);
             $table->timestamps();
             $table->SoftDeletes();
         });

@@ -5,8 +5,8 @@
             @foreach($sliders as $slider)
             <li style="background-image: url({{$slider->image}});">
                 <div class="flex-capition">
-                    <p class="flex-slider_title">{{ $slider->title }}</p>
-                    <p>{{ $slider->text }}</p>
+                    <p class="{{$slider->invertirfuente == 1 ? 'flex-slider_title-invert' : 'flex-slider_title'}}">{{ $slider->title }}</p>
+                    <p class="{{$slider->invertirfuente == 1 ? 'flex-slider_text-invert' : 'flex-slider_text'}}">{{ $slider->text }}</p>
                 </div>
             </li>
             @endforeach
