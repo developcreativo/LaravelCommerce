@@ -21,8 +21,7 @@
 	  	<div class="flexslider">
 			<ul class="slides">
 				@foreach($sliders as $slider)
-				<li>
-					<img src="{{ $slider->image }}" />
+				<li style="background-image: url({{$slider->image}});">
 					<p class="flex-caption">Adventurer Cheesecake Brownie</p>
 				</li>
 				@endforeach

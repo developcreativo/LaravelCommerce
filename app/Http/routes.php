@@ -1,5 +1,6 @@
 <?php
 use App\Producto;
+use App\Slider;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -26,7 +27,8 @@ Route::get('products', function(){
 
 Route::get('/', function () {
 	$productos = Producto::with('categoria', 'tipo', 'marca', 'moneda')->orderBy('id', 'desc')->take(8)->get();
-    return view('welcome', compact('productos'));
+	$sliders = Slider::all();
+    return view('welcome', compact('productos', 'sliders'));
 });
 
 // Login routes...

@@ -275,9 +275,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="login-search">
                     <div class="login">
                         <input type="submit" value="">
-                        <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}">       
+                        <input type="text" value="Buscar.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'buscar..';}">       
                     </div>
-                    <p>Shopin</p>
+                    <p>Laravel Commerce</p>
                 </div>              
             </div>
          <script>
