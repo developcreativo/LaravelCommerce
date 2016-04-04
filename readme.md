@@ -38,14 +38,13 @@ Para poder instalar el software necesita los siguientes requerimientos
 
 	Luego entrar en la dirección de la consola.
 
-## Contributing
+## Contribuir
+Gracias por ayudar en el proyecto, LaravelCommerce es de código abierto y cualquiera puede copiarlo y hacerlo suyo nos gustaría que puedamos compartir nuestros conocimientos y poder mejorarlo juntos.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Seguridad
 
-## Security Vulnerabilities
+El sitio tiene por defecto como usuario administrador el yasser.mussa@gmail.com y el password es "123456789" esos datos pueden ser modificados en cualquier momento. 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### Contacto
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Si quieres comunicarte conmigo puedes escribirme a mi correo yasser.mussa@gmail.com
