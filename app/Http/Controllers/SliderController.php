@@ -87,9 +87,10 @@ class SliderController extends Controller
      */
     public function update(SliderRequest $request, $id)
     {
-        $slider = findOrfail($id);
+        $slider = Slider::findOrfail($id);
         $slider->update($request->all());
-
+        if($request->hasFile('imagen'))
+            $slider->addFoto($request->file('imagen'));
         return redirect()->to('/slider');
     }
 
@@ -101,7 +102,8 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $slider = Slider::findOrfail($id);
+        $slider->delete();
     }
 
     public function getAll()

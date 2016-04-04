@@ -7,7 +7,7 @@
 	    <h3 class="panel-title">Editar Slider</h3>
 	  </div>
 	  <div class="panel-body">
-	  	{!! Form::model($slider, ['method' => 'PATCH', 'action' => ['SliderController@update', $slider->id ]]) !!}
+	  	{!! Form::model($slider, ['method' => 'PATCH', 'files' => true, 'action' => ['SliderController@update', $slider->id ]]) !!}
 	  		<div class="row">
 	  			<div class="col-xs-12 col-md-offset-3 col-md-6">
 					<h4>Si no desea cambiar la imagen no seleccione ning&uacute;n archivo</h4>

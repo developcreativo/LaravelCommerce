@@ -48,7 +48,7 @@ class Slider extends Model
 
     public function getDeleteAttribute()
     {
-    	return '<a href="#" onclick="delete('.$this->id.', 1)"><i class="fa fa-trash"></i></a>';
+    	return '<a onclick="del('.$this->id.', 1)" href="#"><i class="fa fa-trash"></i></a>';
     }
 
    	public function getActionsAttribute()

@@ -109,5 +109,41 @@ function guardarMarca()
 			});
 		}
 	});
-	
 }
+
+
+function del(id, modelo)
+{
+	var url = '';
+	switch(id) {
+		case 1:
+			//Slider
+			url = '/slider/' + id;
+			break;
+		default:
+			break;
+	}
+
+	var token = $('#token').val();
+	swal({
+	  title: "Borrar registro?",
+	  type: "warning",
+	  showCancelButton: true,
+	  confirmButtonColor: "#DD6B55",
+	  confirmButtonText: "Borrar",
+	  closeOnConfirm: false
+	},
+	function(){
+	 	$.ajax({
+	 		url: url,
+	 		headers: {'X-CSRF-TOKEN': token},
+	 		type: 'DELETE',
+	 		datatype: 'json',
+	 		success: function(){
+	 			swal("Borrado!", "El registro se elimino", "success");
+	 		},
+	 	});
+	 	location.reload();
+	});
+	
+}	

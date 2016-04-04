@@ -8,6 +8,7 @@
 	<div class="panel panel-default">
 	  <div class="panel-heading">
 	    <h3 class="panel-title">Sliders</h3>
+	    <input type="hidden" id="token" name="token" value="{{ csrf_token() }}">
 	  </div>
 	  <div class="panel-body">
 	  	<div class="row">
@@ -75,9 +76,13 @@
 	</script>
 	<script>
 		$(window).load(function() {
-			$('.flexslider').flexslider({
-				animation: "slide"
-			});
-		});
+	        $('.flexslider').flexslider({
+	            animation: "fade",
+	            controlNav: false,
+	            directionNav: false,
+	            animationSpeed: 1800,
+	            slideshowSpeed: 14000
+	        });
+	    });
 	</script>
 @endsection
