@@ -28,7 +28,11 @@ Para poder instalar el software necesita los siguientes requerimientos
 
 	Paso 4 
 
-	En la carpeta del proyecto ejecutar los siguientes comandos 
+	En la carpeta del proyecto hacer una copia del archivo .env.example y re-nombrar la copia como .env cambiar la 			configuaración del archivo si es necesario 
+	
+	Paso 5
+	
+	ejecutar los siguientes comandos 
 
 	$ composer install 
 
