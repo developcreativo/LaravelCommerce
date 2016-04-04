@@ -73,7 +73,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{!! url('/auth/login') !!}">Entrar</a></li>
                         <li><a href="{!! url('/auth/register') !!}">Registrar</a></li>
                     @else
-                        <li><a href="{!! url('/productos') !!}">{{ Auth::user()->nombre }}</a></li>
+                        @if(Auth::user()->admin)
+                        <li><a href="{!! url('/productos') !!}">Administraci&oacute;n</a></li>
+                        @else
+                        <li><a href="#">{{ Auth::user()->nombre }}</a></li>
+                        @endif
                         <li><a href="{!! url('auth/logout') !!}">Salir</a></li>
                     @endif
                     </ul>

@@ -16,7 +16,8 @@ class UserTableSeeder extends Seeder
 				'nombre' 	=> 'Yasser',
 				'telefono'	=> '+59891336302',
                 'email'     => 'yasser.mussa@gmail.com',
-				'password' 	=> bcrypt('123456789')
+				'password' 	=> bcrypt('123456789'),
+                'admin'     => 1
         	]);
     }
 }
